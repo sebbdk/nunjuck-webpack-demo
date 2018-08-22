@@ -2,19 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const globEntries = require("webpack-glob-folder-entries");
-
-function getHtmlEntryList(globPath){
-  let entries = globEntries(globPath, true);
-  let folderList = new Array();
-  for (let folder in entries){
-  	if (/\.(njk|nunjucks|html|tpl|tmpl)$/.test(entries[folder])) {
-  		folderList.push(entries[folder]);
-  	}
-  }
-  return folderList;
-}
 
 const d = './src/components';
 const entryFolders = fs.readdirSync(path.resolve(d))
