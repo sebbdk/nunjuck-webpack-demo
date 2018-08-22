@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	{% set vars = htmlWebpackPlugin.options.customData %}
+
+	<div class="left-menu" style="background-color: #999">
+		{{ vars.foo }}
+	</div>
+	<div class="content" style="background-color: #eee; margin: 40px auto;">
+		{% block content %}{% endblock %}
+	</div>	
+
+</body>
+</html>

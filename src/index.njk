@@ -1,0 +1,8 @@
+{% extends "layout.njk" %}
+{% block content %}
+	<h1>I am the main template</h1>
+	<h1> Here comes my content that is injected to layout.njk!</h1>
+
+	{% include "components/a/a.njk" %}
+{% endblock %}
+
